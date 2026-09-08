@@ -1,0 +1,57 @@
+{
+  "robot": "Yaskawa Motoman GP35L",
+  "coordinate_frame": "CAD world frame, units mm, Y up, right-handed",
+  "source": "step/000_gp35l_asm_asm.stp (imported via FreeCAD Import.insert)",
+  "joints": [
+    {
+      "name": "J1_S",
+      "axis_part": "s_axis",
+      "pivot": { "x": 0.0, "y": 0.0, "z": 0.0 },
+      "axis_direction": "+Y",
+      "note": "line X=0, Z=0 (base column rotation). Verified by BASE_AXIS rings r=290/287/248/229/200 at (0,*,0)"
+    },
+    {
+      "name": "J2_L",
+      "axis_part": "l_axis",
+      "pivot": { "x": 145.0, "y": 540.0, "z": 0.0 },
+      "axis_direction": "+Z",
+      "note": "shoulder. Verified by S_AXIS r=162.5@(145,540) and L_AXIS r=150/165/143/133/147/125@(145,540)"
+    },
+    {
+      "name": "J3_U",
+      "axis_part": "u_axis",
+      "pivot": { "x": 145.0, "y": 1690.0, "z": 0.0 },
+      "axis_direction": "+Z",
+      "note": "elbow. Verified by L_AXIS r=125@(145,1690) and U_AXIS r=122@(145,1690,86.97), r=79"
+    },
+    {
+      "name": "J4_R",
+      "axis_part": "r_axis",
+      "pivot": { "x": 663.0, "y": 1900.0, "z": 0.0 },
+      "axis_direction": "+X",
+      "note": "forearm roll. Axis line Y=1900,Z=0. R_AXIS tube r=74 rings @(725..1370,1900,0); U_AXIS seat r=127@(318,1900,0), r=81.5@(588,1900,0)"
+    },
+    {
+      "name": "J5_B",
+      "axis_part": "b_axis",
+      "pivot": { "x": 1370.0, "y": 1900.0, "z": 0.0 },
+      "axis_direction": "+Z",
+      "note": "wrist pitch. Wrist center (1370,1900,0) = intersection of J4/J5. B_AXIS r=92@(1370,1900,*)"
+    },
+    {
+      "name": "J6_T",
+      "axis_part": "t_axis",
+      "pivot": { "x": 1545.0, "y": 1900.0, "z": 0.0 },
+      "axis_direction": "+X",
+      "note": "tool flange rotation. Same geometric axis as J4 (Y=1900,Z=0); flange face at X~1545. T_AXIS r=55@(1532,1900,0), r=49, r=25"
+    }
+  ],
+  "assembly_bbox_mm": {
+    "xmin": -412.9, "ymin": -0.5, "zmin": -257.9,
+    "xmax": 1545.0, "ymax": 2091.0, "zmax": 348.2
+  },
+  "wrist_center_mm": { "x": 1370.0, "y": 1900.0, "z": 0.0 },
+  "tool_flange_mm": { "x": 1545.0, "y": 1900.0, "z": 0.0 },
+  "unity_hierarchy": ["root", "S_AXIS", "L_AXIS", "U_AXIS", "R_AXIS", "B_AXIS", "T_AXIS"],
+  "unity_rotation_axes": { "J1_S": "Y", "J2_L": "Z", "J3_U": "Z", "J4_R": "X", "J5_B": "Z", "J6_T": "X" }
+}
