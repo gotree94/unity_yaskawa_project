@@ -4,6 +4,8 @@
 
 ## 1. 프로젝트 목표
 
+https://www.yaskawa.eu.com/robotics/robots/handling-mounting/productdetail/product/gp35l_700
+
 `C:\Users\Administrator\Downloads\GP35L_3D` 안에 있는 야스카와(Motoman) **GP35L** 6축 수직다관절 로봇의 CAD 파일(STEP/IGES/shrink_wrap)을 Unity로 임포트하고, 터틀봇/ROS 스타일로 **관절각을 조절**할 수 있게 만드는 프로젝트.
 
 총 3가지 제어 방식을 모두 구현하는 것을 목표로 함:
